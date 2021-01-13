@@ -30,8 +30,6 @@ class BoardControllerTest {
 
     @BeforeEach
     void init(){
-
-        //given
         boardList = Arrays.asList(
                 new Board(1L ,"t1", "c1"),
                 new Board(1L ,"t2", "c2"),
@@ -62,13 +60,12 @@ class BoardControllerTest {
         actions
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("id").value(1L));
-
     }
 
     @Disabled
     @Test
     void testIndexPage() throws Exception {
-        mvc.perform(get("/index"))
+        mvc.perform(get("/"))
                 .andExpect(status().isOk());
     }
 
