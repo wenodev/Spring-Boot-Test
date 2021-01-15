@@ -1,5 +1,6 @@
 package com.example.springboottdd.user;
 
+import com.example.springboottdd.security.UserRole;
 import com.example.springboottdd.user.entiy.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -19,6 +20,11 @@ class UserTest {
     void testUser(){
         assertEquals(user.getId(), 1L);
         assertEquals(user.getName(), "name");
+    }
+
+    @Test
+    void testUserRole(){
+        System.out.println(UserRole.ADMIN.getPermissions());
     }
 
 
