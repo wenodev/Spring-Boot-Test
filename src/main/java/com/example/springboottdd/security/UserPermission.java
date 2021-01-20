@@ -1,21 +1,18 @@
 package com.example.springboottdd.security;
 
 public enum UserPermission {
+    CUSTOMER_READ("customer:read"),
+    CUSTOMER_WRITE("customer:write"),
+    EVENT_READ("event:read"),
+    EVENT_WRITE("event:write");
 
-    USER_READ("user:read"),
-    USER_WRITE("user:write"),
-    COURSE_READ("course:read"),
-    COURSE_WRITE("course:write");
+    private String permission;
 
-    private final String permissions;
-
-    UserPermission(String permissions) {
-        this.permissions = permissions;
+    UserPermission(String permission) {
+        this.permission = permission;
     }
 
-    public String getPermissions(){
-        return permissions;
+    public String getPermission() {
+        return permission;
     }
-
-
 }
