@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.security.Principal;
 import java.util.Arrays;
 import java.util.List;
 
@@ -20,12 +19,11 @@ public class UserController {
     );
 
     @GetMapping("/{id}")
-    public String getUserById(@PathVariable Long id, Principal principal){
-//        return users.stream()
-//                .filter(user -> id.equals(user.getId()))
-//                .findFirst()
-//                .orElseThrow( () -> new IllegalStateException("no id : " + id));
-        return principal.toString();
+    public User getUserById(@PathVariable Long id){
+        return users.stream()
+                .filter(user -> id.equals(user.getId()))
+                .findFirst()
+                .orElseThrow( () -> new IllegalStateException("no id : " + id));
     }
 
     @GetMapping
