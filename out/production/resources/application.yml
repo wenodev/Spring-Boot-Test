@@ -1,0 +1,13 @@
+spring:
+  h2:
+    console: enabled=true
+
+
+graphql:
+  servlet:
+    mapping: /post
+#    enabled: true
+#    corsEnabled: true
+#    subscriptions:
+#      websocket:
+#        path: /subscriptions
