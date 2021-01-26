@@ -7,5 +7,4 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("management/api/v1/users")
 public class UserManagementController {
 
-
 }
