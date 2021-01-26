@@ -1,0 +1,18 @@
+schema {
+	query: Query
+}
+
+type Post{
+    id: String
+    title: String
+}
+
+type Task{
+    id: String
+    title: String
+}
+
+type Query {
+    getTasks: [Task]
+    getPosts: [Post]
+}

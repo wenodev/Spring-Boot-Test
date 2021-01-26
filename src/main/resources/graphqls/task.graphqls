@@ -1,8 +1,0 @@
-type Task{
-    id : String,
-    title : String
-}
-
-type Query{
-    getTasks: [Task]
-}

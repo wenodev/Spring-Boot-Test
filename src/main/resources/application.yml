@@ -1,11 +1,12 @@
 spring:
   h2:
-    console: enabled=true
+    console:
+      enabled: true
 
 
 graphql:
   servlet:
-    mapping: /post
+    mapping: /weno
 #    enabled: true
 #    corsEnabled: true
 #    subscriptions:
